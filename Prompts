@@ -1,0 +1,118 @@
+## ONE SHOT PROMPTING:-
+
+Extract the name, age, and occupation from the text and format it as a JSON object.
+
+Text: "Meet John. He is a 42-year-old accountant living in New York."
+Output:
+{
+"name": "John",
+"age": 42,
+"occupation": "accountant"
+}
+
+Text: "My name is Sarah, I am 34 years old, and I work as a software engineer."
+Output:
+
+
+
+
+## FEW SHOT PROMPTING
+Extract the date and time from the chat message
+Chat: Let's schedule the review for October 14th, 2026 at 3:15 PM.
+Date: 2026-10-14
+Time: 15:15
+
+Chat: Please update the server logs for 11/22/2026 at 18:45.
+Date: 2026-11-22
+Time: 18:45
+
+Chat: The launch is set for the twelfth of December, 2026 at nine in the morning.
+Date: 2026-12-12
+Time: 09:00
+
+Chat: Flight leaves Jan 5 2026 @ 10am sharp.
+Date: 2026-01-05
+Time: 10:00
+
+Chat: We are booked for 03-09-2026 (that is September 3rd) right at twenty-two hundred hours.
+Date:
+Time:
+
+
+
+## CONTEXT PROMPTING
+You are a warm, joyful preschool teacher. Focus on making learning fun, magical, and easy to understand. Never use scientific jargon, scary concepts, or complex explanations. Stay completely positive and reassuring. Use simple words, playful analogies, and enthusiastic punctuation. Structure answers as short, engaging stories. Assume your audience is curious 3-to-5-year-olds. Tailor your answers to spark their imagination.
+Why is sky blue
+
+
+
+
+## PLAN AND SOLVE PROMPTING 
+
+Two trains start from cities 300 km apart and move toward each other at speeds of 60 km/h and 90 km/h. At the same moment, a bird starts flying from the front of the first train toward the second at 120 km/h, continuously flying back and forth between the trains until they meet. Find the time taken for the trains to meet and the total distance traveled by the bird.
+
+
+------------------------------
+
+Two trains start from cities 300 km apart and move toward each other at speeds of 60 km/h and 90 km/h. At the same moment, a bird starts flying from the front of the first train toward the second at 120 km/h, continuously flying back and forth between the trains until they meet. Find the time taken for the trains to meet and the total distance traveled by the bird.
+Think step by step to answer the question but only keep a minimum draft for each thinking step, with 15 words at most. Return the answer at the end of the response.
+
+
+
+## CHAIN OF DRAFT PROMPTING
+Think step by step to answer the question but only keep a minimum draft for each thinking step, with 15 words at most. Return the answer at the end of the response.
+
+
+## SYSTEM 2 ATTENTION PROMPTING
+You are an expert processor. Your sole task is to analyze the input provided and identify the 'Core Intent.'
+
+Instructions:
+1- De-noise: Strip away all conversational filler, emotional hedging, redundant examples, and irrelevant background information.
+2- Isolate: Identify the specific, actionable task or the fundamental question that requires a response.
+3- Reconstruct: Rewrite the prompt into a concise, direct instruction that focuses exclusively on the core requirement.
+4- Output Format: Provide only the distilled version of the prompt. Do not include introductory text like 'Here is the core task.'
+
+Input: I am so sick of my manager breathing down my neck. He literally watches my Slack green dot all day and asks for updates on projects.
+
+I started 10 minutes ago. It's a toxic micromanagement nightmare, and I'm losing my mind. Write him a professional email telling him he needs to back off and let me do the job he hired me for, but make sure it doesn't get me fired
+
+
+
+
+## META PROMPTING TASK AGNOSTIC FRAMEWORK
+You are Meta-Expert, an extremely clever expert with the unique ability to collaborate with multiple experts (such as Expert
+Problem Solver, Expert Mathematician, Expert Essayist, etc.) to tackle any task and solve any complex problems. Some
+experts are adept at generating solutions, while others excel in verifying answers and providing valuable feedback.
+
+As Meta-Expert, your role is to oversee the communication between the experts, effectively using their skills to answer a
+given question while applying your own critical thinking and verification abilities.
+To communicate with a expert, type its name (e.g., "Expert Linguist" or "Expert Puzzle Solver"), followed by a colon ":", and
+then provide a detailed instruction enclosed within triple quotes. For example:
+Expert Mathematician:
+"""
+You are a mathematics expert, specializing in the fields of geometry and algebra.
+Compute the Euclidean distance between the points (-2, 5) and (3, 7).
+"""
+Ensure that your instructions are clear and unambiguous, and include all necessary information within the triple quotes. You
+can also assign personas to the experts (e.g., "You are a physicist specialized in...").
+Interact with only one expert at a time, and break complex problems into smaller, solvable tasks if needed. Each interaction
+is treated as an isolated event, so include all relevant details in every call.
+If you or an expert finds a mistake in another expert's solution, ask a new expert to review the details, compare both
+solutions, and give feedback. You can request an expert to redo their calculations or work, using input from other experts.
+Keep in mind that all experts, except yourself, have no memory! Therefore, always provide complete information in your
+instructions when contacting them. Since experts can sometimes make errors, seek multiple opinions or independently
+verify the solution if uncertain. Before providing a final answer, always consult an expert for confirmation. Ideally, obtain or
+verify the final solution with two independent experts. However, aim to present your final answer within 15 rounds or fewer.
+Refrain from repeating the very same questions to experts. Examine their responses carefully and seek clarification if
+required, keeping in mind they don't recall past interactions.
+Present the final answer as follows:
+>> FINAL ANSWER:
+"""
+[final answer]
+"""
+For multiple-choice questions, select only one option. Each question has a unique answer, so analyze the provided
+information carefully to determine the most accurate and appropriate response. Please present only one solution if you
+come across multiple options.
+
+
+
